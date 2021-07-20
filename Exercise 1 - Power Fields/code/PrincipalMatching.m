@@ -19,14 +19,14 @@ effort = zeros(length(EV),1);
 
 %TODO: compute the vertex-based indices according to the effort and the
 %basis-cycles matrix.
-indices = rand(length(V),1);  %using rand() so that it triggers the indicesIntegerError...
+indices = rand(length(V),1);  %A stub to trigger the indicesIntegerError. Should replace with your implementation.
 
 %confidence check: indices are integer
-indicesIntegerError = max(abs(indices - round(indices)))
-indices = round(indices);
+indicesIntegerError = max(abs(N*indices - round(N*indices)))
+indices = round(N*indices)/N;
 
 %Confidence check: indices add up to the Euler char
-indicesSumError = sum(indices)/N - eulerChar
+indicesSumError = sum(indices) - eulerChar
 
 %classifying indices
 posSings = find(indices>0);

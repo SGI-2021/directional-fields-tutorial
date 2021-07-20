@@ -67,13 +67,13 @@ constPowerField = constComplexField.^N;
 %exercise #1, but with the prescribed effort), and solve for freePowerField
 
 %solving the system
-constPowerField = zeros(length(constFaces), 1); %put in the power representation of the constraints
-freePowerField = zeros(length(freeFaces),1);  %should be "lhs\rhs" once you generate them.
+constPowerField = zeros(length(constFaces), 1); %TODO: put in the power representation of the constraints
+freePowerField = zeros(length(freeFaces),1);  %TODO: should be "lhs\rhs" once you generate them.
 fullPowerField = zeros(length(F),1);
 fullPowerField(freeFaces) = freePowerField;
 fullPowerField(constFaces) = constPowerField;
 
-%uncomment this once you assemble the lhs and ehs to check there is no LS
+%TODO: uncomment this once you assemble the lhs and ehs to check there is no LS
 %error.
 %fieldFromEffortError = max(abs(lhs*freePowerField-rhs))
 
